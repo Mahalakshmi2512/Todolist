@@ -1,0 +1,130 @@
+/* ======== Navigation Bar Styling ======== */
+.navbar {
+    padding: 20px 30px; /* Increased padding for a larger header */
+    background: linear-gradient(135deg, #03338b, #2a5298); /* Stylish Gradient */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    animation: fadeInDown 0.8s ease-in-out;
+}
+
+/* Logo Styling */
+.navbar-brand {
+    font-size: 2.2rem; /* Larger logo text */
+    font-weight: bold;
+    color: #fff !important;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #ffcc00 !important;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Navbar Toggler Animation */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(180deg); /* Rotate animation */
+}
+
+/* Navbar Links */
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-item {
+    padding: 15px; /* Adjusted padding */
+}
+
+/* Navigation Link Styling */
+.nav-link {
+    font-size: 1.5rem; /* Increased font size */
+    color: #f8f9fa !important;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #ffcc00 !important;
+    transform: scale(1.1); /* Smooth hover zoom effect */
+}
+
+/* ======== Mobile View Enhancements ======== */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #1e3c72; /* Darker shade for mobile menu */
+        padding: 15px;
+        border: 2px solid white;
+        border-radius: 12px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        animation: slideIn 0.5s ease-in-out;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-item {
+        width: 100%;
+        animation: fadeIn 0.8s ease-in-out forwards;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 12px;
+        font-size: 1.3rem; /* Slightly bigger for mobile */
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* ======== Animations ======== */
+
+/* Navbar Fade-In from Top */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Link Fade-In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Sidebar Slide-In Animation (Mobile View) */
+@keyframes slideIn {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

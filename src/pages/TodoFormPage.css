@@ -1,0 +1,159 @@
+/* ======== Todo List Page Styling ======== */
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    animation: fadeInBg 1.5s ease-in-out;
+}
+
+/* Stylish Todo Box */
+.todo-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+    transform: scale(0.9);
+    animation: popIn 0.6s ease-out forwards;
+}
+
+/* Header Styling */
+.todo-box h2 {
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideDown 1s ease-in-out forwards;
+}
+
+/* Task List Styling */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.6s ease-in-out forwards;
+}
+
+.task-item:nth-child(odd) {
+    background: #e3eaf8;
+}
+
+.task-name {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Action Buttons */
+.task-actions button {
+    border: none;
+    background: #ff5e57;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.task-actions button:hover {
+    background: #d63031;
+    transform: scale(1.05);
+}
+
+/* Add Task Button */
+.add-task-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.add-task-btn:hover {
+    background: linear-gradient(135deg, #a8e063, #56ab2f);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(86, 171, 47, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .todo-box {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/* ======== Animations ======== */
+
+/* Fade-in Background Animation */
+@keyframes fadeInBg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Pop-in Animation for Box */
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Slide Down for Heading */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in Up for Task Items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

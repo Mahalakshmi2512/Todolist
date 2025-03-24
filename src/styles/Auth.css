@@ -1,0 +1,118 @@
+/* Center the auth container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+    animation: fadeInBg 2s ease-in-out;
+}
+
+/* Stylish Auth Box */
+.auth-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: left;
+    transform: scale(0.9);
+    animation: popIn 0.6s ease-out forwards;
+}
+
+/* Form Styling */
+.auth-box h2 {
+    color: #333;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideDown 1s ease-in-out forwards;
+}
+
+.auth-box .form-control {
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.auth-box .form-control:focus {
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Button Styling */
+.auth-box .btn {
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Animation */
+.auth-box .btn:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+    box-shadow: 0px 4px 10px rgba(102, 126, 234, 0.4);
+}
+
+/* Text Styling */
+.auth-box p {
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+.auth-box a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Link Hover Effect */
+.auth-box a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Background Fade In Animation */
+@keyframes fadeInBg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Auth Box Pop In Animation */
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Heading Slide Down Animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
